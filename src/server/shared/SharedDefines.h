@@ -404,37 +404,37 @@ uint32 constexpr QuestDifficultyColors[MAX_QUEST_DIFFICULTY] = {
 enum SpellAttr0 : uint32
 {
     SPELL_ATTR0_UNK0                             = 0x00000001, // TITLE Unknown attribute 0@Attr0
-    SPELL_ATTR0_REQ_AMMO                         = 0x00000002, // TITLE Treat as ranged attack DESCRIPTION Use ammo, ranged attack range modifiers, ranged haste, etc.
-    SPELL_ATTR0_ON_NEXT_SWING                    = 0x00000004, // TITLE On next melee (type 1) DESCRIPTION Both "on next swing" attributes have identical handling in server & client
-    SPELL_ATTR0_IS_REPLENISHMENT                 = 0x00000008, // TITLE Replenishment (client only)
-    SPELL_ATTR0_ABILITY                          = 0x00000010, // TITLE Treat as ability DESCRIPTION Cannot be reflected, not affected by cast speed modifiers, etc.
-    SPELL_ATTR0_TRADESPELL                       = 0x00000020, // TITLE Trade skill recipe DESCRIPTION Displayed in recipe list, not affected by cast speed modifiers
-    SPELL_ATTR0_PASSIVE                          = 0x00000040, // TITLE Passive spell DESCRIPTION Spell is automatically cast on self by core
-    SPELL_ATTR0_HIDDEN_CLIENTSIDE                = 0x00000080, // TITLE Hidden in UI (client only) DESCRIPTION Not visible in spellbook or aura bar
-    SPELL_ATTR0_HIDE_IN_COMBAT_LOG               = 0x00000100, // TITLE Hidden in combat log (client only) DESCRIPTION Spell will not appear in combat logs
-    SPELL_ATTR0_TARGET_MAINHAND_ITEM             = 0x00000200, // TITLE Auto-target mainhand item (client only) DESCRIPTION Client will automatically select main-hand item as cast target
-    SPELL_ATTR0_ON_NEXT_SWING_2                  = 0x00000400, // TITLE On next melee (type 2) DESCRIPTION Both "on next swing" attributes have identical handling in server & client
-    SPELL_ATTR0_UNK11                            = 0x00000800, // TITLE Unknown attribute 11@Attr0
-    SPELL_ATTR0_DAYTIME_ONLY                     = 0x00001000, // TITLE Only usable during daytime (unused)
-    SPELL_ATTR0_NIGHT_ONLY                       = 0x00002000, // TITLE Only usable during nighttime (unused)
-    SPELL_ATTR0_INDOORS_ONLY                     = 0x00004000, // TITLE Only usable indoors
-    SPELL_ATTR0_OUTDOORS_ONLY                    = 0x00008000, // TITLE Only usable outdoors
-    SPELL_ATTR0_NOT_SHAPESHIFT                   = 0x00010000, // TITLE Not usable while shapeshifted
-    SPELL_ATTR0_ONLY_STEALTHED                   = 0x00020000, // TITLE Only usable in stealth
-    SPELL_ATTR0_DONT_AFFECT_SHEATH_STATE         = 0x00040000, // TITLE Don't shealthe weapons (client only)
-    SPELL_ATTR0_LEVEL_DAMAGE_CALCULATION         = 0x00080000, // TITLE Scale with caster level DESCRIPTION For non-player casts, scale impact and power cost with caster's level
-    SPELL_ATTR0_STOP_ATTACK_TARGET               = 0x00100000, // TITLE Stop attacking after cast DESCRIPTION After casting this, the current auto-attack will be interrupted
-    SPELL_ATTR0_IMPOSSIBLE_DODGE_PARRY_BLOCK     = 0x00200000, // TITLE Prevent physical avoidance DESCRIPTION Spell cannot be dodged, parried or blocked
-    SPELL_ATTR0_CAST_TRACK_TARGET                = 0x00400000, // TITLE Automatically face target during cast (client only)
-    SPELL_ATTR0_CASTABLE_WHILE_DEAD              = 0x00800000, // TITLE Can be cast while dead DESCRIPTION Spells without this flag cannot be cast by dead units in non-triggered contexts
-    SPELL_ATTR0_CASTABLE_WHILE_MOUNTED           = 0x01000000, // TITLE Can be cast while mounted
-    SPELL_ATTR0_DISABLED_WHILE_ACTIVE            = 0x02000000, // TITLE Cooldown starts on expiry DESCRIPTION Spell is unusable while already active, and cooldown does not begin until the effects have worn off
-    SPELL_ATTR0_NEGATIVE_1                       = 0x04000000, // TITLE Is negative spell DESCRIPTION Forces the spell to be treated as a negative spell
-    SPELL_ATTR0_CASTABLE_WHILE_SITTING           = 0x08000000, // TITLE Can be cast while sitting
-    SPELL_ATTR0_CANT_USED_IN_COMBAT              = 0x10000000, // TITLE Cannot be used in combat
-    SPELL_ATTR0_UNAFFECTED_BY_INVULNERABILITY    = 0x20000000, // TITLE Pierce invulnerability DESCRIPTION Allows spell to pierce invulnerability, unless the invulnerability spell also has this attribute
-    SPELL_ATTR0_HEARTBEAT_RESIST_CHECK           = 0x40000000, // TITLE Periodic resistance checks DESCRIPTION Periodically re-rolls against resistance to potentially expire aura early
-    SPELL_ATTR0_CANT_CANCEL                      = 0x80000000  // TITLE Aura cannot be cancelled DESCRIPTION Prevents the player from voluntarily canceling a positive aura
+    SPELL_ATTR0_REQ_AMMO                         = 0x00000002, // 需要弹药,这表示法术需要使用弹药，例如用于远程攻击的箭矢或子弹TITLE Treat as ranged attack DESCRIPTION Use ammo, ranged attack range modifiers, ranged haste, etc.
+    SPELL_ATTR0_ON_NEXT_SWING                    = 0x00000004, // 在下一次普通攻击（近战类型 1）时触发,这意味着法术效果将在下一次近战攻击时触发 TITLE On next melee (type 1) DESCRIPTION Both "on next swing" attributes have identical handling in server & client
+    SPELL_ATTR0_IS_REPLENISHMENT                 = 0x00000008, // 补给效果（仅客户端）,表示这个法术是一种补给效果，通常由客户端处理 TITLE Replenishment (client only)
+    SPELL_ATTR0_ABILITY                          = 0x00000010, // 视为技能,这表示法术应该被视为一种技能，通常不受反射等影响 TITLE Treat as ability DESCRIPTION Cannot be reflected, not affected by cast speed modifiers, etc.
+    SPELL_ATTR0_TRADESPELL                       = 0x00000020, // 专业技能配方,这表示法术是一种专业技能配方，会显示在专业技能列表中，通常不受施法速度修改的影响 TITLE Trade skill recipe DESCRIPTION Displayed in recipe list, not affected by cast speed modifiers
+    SPELL_ATTR0_PASSIVE                          = 0x00000040, // 被动法术,这表示法术会自动在角色身上施放，无需玩家触发 TITLE Passive spell DESCRIPTION Spell is automatically cast on self by core
+    SPELL_ATTR0_HIDDEN_CLIENTSIDE                = 0x00000080, // 在用户界面中隐藏（仅客户端）。这表示法术不会在法术书或光环条中显示，只在内部处理 TITLE Hidden in UI (client only) DESCRIPTION Not visible in spellbook or aura bar
+    SPELL_ATTR0_HIDE_IN_COMBAT_LOG               = 0x00000100, // 在战斗日志中隐藏（仅客户端）。这表示法术不会出现在战斗日志中记录 TITLE Hidden in combat log (client only) DESCRIPTION Spell will not appear in combat logs
+    SPELL_ATTR0_TARGET_MAINHAND_ITEM             = 0x00000200, // 自动目标主手物品（仅客户端）。这表示客户端会自动选择主手物品作为施法目标 TITLE Auto-target mainhand item (client only) DESCRIPTION Client will automatically select main-hand item as cast target
+    SPELL_ATTR0_ON_NEXT_SWING_2                  = 0x00000400, // 在下一次普通攻击（近战类型 2）时触发，与 SPELL_ATTR0_ON_NEXT_SWING 类似 TITLE On next melee (type 2) DESCRIPTION Both "on next swing" attributes have identical handling in server & client
+    SPELL_ATTR0_UNK11                            = 0x00000800, // 未知属性 11 TITLE Unknown attribute 11@Attr0
+    SPELL_ATTR0_DAYTIME_ONLY                     = 0x00001000, // 只能在白天使用（未使用） TITLE Only usable during daytime (unused)
+    SPELL_ATTR0_NIGHT_ONLY                       = 0x00002000, // 只能在夜晚使用（未使用）TITLE Only usable during nighttime (unused)
+    SPELL_ATTR0_INDOORS_ONLY                     = 0x00004000, // 只能在室内使用 TITLE Only usable indoors
+    SPELL_ATTR0_OUTDOORS_ONLY                    = 0x00008000, // 只能在户外使用 TITLE Only usable outdoors
+    SPELL_ATTR0_NOT_SHAPESHIFT                   = 0x00010000, // 不能在形态变换时使用 TITLE Not usable while shapeshifted
+    SPELL_ATTR0_ONLY_STEALTHED                   = 0x00020000, // 只能在潜行状态下使用 TITLE Only usable in stealth
+    SPELL_ATTR0_DONT_AFFECT_SHEATH_STATE         = 0x00040000, // 不隐藏武器（仅客户端） TITLE Don't shealthe weapons (client only)
+    SPELL_ATTR0_LEVEL_DAMAGE_CALCULATION         = 0x00080000, // 与施法者等级一起伤害计算。这表示法术的威力和能量成本会随着施法者的等级而缩放 TITLE Scale with caster level DESCRIPTION For non-player casts, scale impact and power cost with caster's level
+    SPELL_ATTR0_STOP_ATTACK_TARGET               = 0x00100000, // 施法后停止攻击目标。这表示在施法后，当前的自动攻击将被中断 TITLE Stop attacking after cast DESCRIPTION After casting this, the current auto-attack will be interrupted
+    SPELL_ATTR0_IMPOSSIBLE_DODGE_PARRY_BLOCK     = 0x00200000, // 无法躲避、招架或格挡,这表示法术不会被目标躲避、招架或格挡。TITLE Prevent physical avoidance DESCRIPTION Spell cannot be dodged, parried or blocked
+    SPELL_ATTR0_CAST_TRACK_TARGET                = 0x00400000, // 在施法时自动面向目标（仅客户端） TITLE Automatically face target during cast (client only)
+    SPELL_ATTR0_CASTABLE_WHILE_DEAD              = 0x00800000, // 可以在死亡状态下施法,没有这个标志的法术不能在非触发上下文中由死亡单位施放 TITLE Can be cast while dead DESCRIPTION Spells without this flag cannot be cast by dead units in non-triggered contexts
+    SPELL_ATTR0_CASTABLE_WHILE_MOUNTED           = 0x01000000, // 可以在骑乘状态下施法 TITLE Can be cast while mounted
+    SPELL_ATTR0_DISABLED_WHILE_ACTIVE            = 0x02000000, // 冷却时间在法术生效时开始,这表示法术在已生效的情况下无法使用,冷却时间将在效果消失后开始计时 TITLE Cooldown starts on expiry DESCRIPTION Spell is unusable while already active, and cooldown does not begin until the effects have worn off
+    SPELL_ATTR0_NEGATIVE_1                       = 0x04000000, // 是负面法术,这将强制法术被视为负面法术 TITLE Is negative spell DESCRIPTION Forces the spell to be treated as a negative spell
+    SPELL_ATTR0_CASTABLE_WHILE_SITTING           = 0x08000000, // 可以在坐下状态下施法 TITLE Can be cast while sitting
+    SPELL_ATTR0_CANT_USED_IN_COMBAT              = 0x10000000, // 不能在战斗中使用 TITLE Cannot be used in combat
+    SPELL_ATTR0_UNAFFECTED_BY_INVULNERABILITY    = 0x20000000, // 穿透无敌,这允许法术穿透无敌效果，除非无敌法术本身也具有这个属性 TITLE Pierce invulnerability DESCRIPTION Allows spell to pierce invulnerability, unless the invulnerability spell also has this attribute
+    SPELL_ATTR0_HEARTBEAT_RESIST_CHECK           = 0x40000000, // 周期性抗性检查,这表示法术会定期进行抗性检查，可能提前终止光环效果 TITLE Periodic resistance checks DESCRIPTION Periodically re-rolls against resistance to potentially expire aura early
+    SPELL_ATTR0_CANT_CANCEL                      = 0x80000000  // 光环不可取消,阻止玩家自愿取消积极的光环 TITLE Aura cannot be cancelled DESCRIPTION Prevents the player from voluntarily canceling a positive aura
 };
 
 // EnumUtils: DESCRIBE THIS
@@ -3070,6 +3070,7 @@ constexpr uint32 SkillByQuestSort(int32 QuestSort)
     return 0;
 }
 
+//技能种类
 enum SkillCategory
 {
     SKILL_CATEGORY_ATTRIBUTES    = 5,
